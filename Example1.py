@@ -16,9 +16,21 @@ while myage is None:
             print("sorry that isnt a number")
         if myage==100:
             print("congratulations on making it to 100")
-        gender=input("Are you a girl a boy or non binary?")
-        print("Aren't you a big",gender)
-
     except ValueError:
         print("Dodgy entry")
+
+genderList = {"boy","girl","non binary"}
+
+gender = None
+
+while gender not in genderList:
+    gender=input("Are you a girl a boy or non binary?").lower()
+
+
+    if gender in genderList:
+        print(f"You are called {name}, you are {myage}.  Arent you big {gender}")
+    else:
+        print("That isnt a valid answer, Try again")
+
+        
 
