@@ -1,23 +1,34 @@
+def Tell_me_a_number(passednumber,question):
+    while passednumber is None:
+        inputmyage=input(question)
+
+        try:
+            passednumber=int(inputmyage)
+            if type(passednumber) == int:
+                print("Wow",passednumber," is a nice number")
+                return passednumber
+            else:
+                print("sorry that isnt a number")
+          
+        except ValueError:
+            print("Dodgy entry")
+
+        
+
+
+
 print("Hello my name is Dylan")
 name=input("What is your name? ")
 print("Nice to meet you",name )
 
-
 myage = None
+question= "How old are you? "
+myage = Tell_me_a_number(myage, question)
+ 
+legs=None
+question= "How many legs? "
+legs = Tell_me_a_number(legs,question)
 
-while myage is None:
-    inputmyage=input("How old are you? ")
-
-    try:
-        myage=int(inputmyage)
-        if type(myage) == int:
-            print("Wow",myage," is a nice age")
-        else:
-            print("sorry that isnt a number")
-        if myage==100:
-            print("congratulations on making it to 100")
-    except ValueError:
-        print("Dodgy entry")
 
 genderList = {"boy","girl","non binary"}
 
@@ -32,5 +43,10 @@ while gender not in genderList:
     else:
         print("That isnt a valid answer, Try again")
 
-        
+siblings=None
+question="How many siblings do you have?"
+siblings = Tell_me_a_number(siblings,question)
 
+print("legs=", legs)
+print("siblngs=", siblings)
+print("age=", myage)

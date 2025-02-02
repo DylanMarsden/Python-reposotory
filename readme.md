@@ -1,1 +1,1 @@
-test readme
+This program utilises while loops, inputs,strings and integers to arsk and return the persons name age amunt of legs and sibilings at he end of the code
